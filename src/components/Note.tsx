@@ -1,6 +1,8 @@
+import { useSpring, animated } from "@react-spring/web";
+
 function Note({ content, tags }: Note) {
   return (
-    <li className="flex flex-col justify-between h-44 bg-palette-1 p-5 border-2 border-transparent rounded-md shadow">
+    <animated.li className="flex flex-col justify-between h-44 bg-palette-1 p-5 border-2 border-transparent rounded-md shadow">
       <p className="text-palette-3">{content}</p>
       <ul className="space-x-4">
         {tags.map((tag) => (
@@ -9,7 +11,7 @@ function Note({ content, tags }: Note) {
           </li>
         ))}
       </ul>
-    </li>
+    </animated.li>
   );
 }
 
